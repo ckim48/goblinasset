@@ -1,0 +1,67 @@
+const products = [
+  {
+    name: 'Goblin Unicon',
+    price: 3.99,
+    desc: 'Bring your game to life with this high-quality, animated Goblin Unicon character. Equipped with detailed textures and multiple animations, this asset is ready to deploy in your next RPG, MOBA, or fantasy game.',
+    available: true,
+    img: 'product1.png',
+    spec: {
+      job: 'Student',
+      style: 'Stylish',
+      type: ['Idle', 'Attack', 'Run', 'Die'],
+    },
+    filter: 'goblin',
+  },
+  {
+    name: 'Pink Goblin',
+    price: 3.99,
+    desc: '',
+    available: true,
+    img: 'product2.png',
+    spec: {
+      job: 'Student',
+      style: 'Stylish',
+      type: ['Idle', 'Attack', 'Run', 'Die'],
+    },
+    filter: 'goblin',
+  },
+  {
+    name: 'Blue Detective Goblin',
+    price: 3.99,
+    desc: '',
+    available: true,
+    img: 'zombie1.png',
+    spec: {
+      job: 'Student',
+      style: 'Stylish',
+      type: ['Idle', 'Attack', 'Run', 'Die'],
+    },
+    filter: 'goblin',
+  },
+    {
+    name: 'Yellow Detective Goblin',
+    price: 3.99,
+    desc: '',
+    available: true,
+    img: 'zombie2.png',
+    spec: {
+      job: 'Student',
+      style: 'Stylish',
+      type: ['Idle', 'Attack', 'Run', 'Die'],
+    },
+    filter: 'goblin',
+  },
+    {
+    name: 'Pink Detective Goblin',
+    price: 3.99,
+    desc: '',
+    available: true,
+    img: 'zombie3.png',
+    spec: {
+      job: 'Student',
+      style: 'Stylish',
+      type: ['Idle', 'Attack', 'Run', 'Die'],
+    },
+    filter: 'goblin',
+  },
+];
