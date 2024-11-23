@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Goblintown Shop</title>
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Ranchers&display=swap"
+      rel="stylesheet" />
+    <style>
+      body {
+        background: linear-gradient(135deg, #f7f8fa, #eaeff3);
+      }
+      .shop-section {
+        padding: 60px 0;
+/*        height: 100vh;*/
+        background: linear-gradient(135deg, #f7f8fa, #eaeff3);
+      }
+
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+     
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #searchBar {
+        max-width: 300px;
+        padding: 10px 20px;
+        font-size: 1rem;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        outline: none;
+      }
+
+
+
+      #searchBar:focus {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .filter-buttons .btn{
+          background: linear-gradient(135deg, darkorange 0%, yellow 100%);
+          border:none;
+          color:white;
+          border-radius: 25px;
+          padding: 10px 20px;
+          transition: transform 0.3s;
+      }
+      .filter-buttons .btn:hover{
+        transform: scale(1.1);
+      }
+      .product-card{
+          border: 2px solid #2f4f2f;
+          border-radius: 15px;
+          padding: 20px 5px;
+
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Header/Navbar -->
+    <header id="header" class="header d-flex align-items-center">
+      <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <h1 class="sitename ms-md-4">Goblintown</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu me-md-2">
+          <ul>
+            <!-- <li><a class="active" href="shop.html">Shop</a></li> -->
+            <!-- <li><a href="mypurchase.html">My Purchase</a></li> -->
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="header-icons d-flex align-items-center me-md-4">
+          <a id="profileIcon" href="mypurchase.html" class="me-3 d-none">
+            <i class="bi bi-person-circle" style="font-size: 1.5rem"></i>
+          </a>
+          <a id="cartIcon" class="me-md-4 position-relative d-none" href="cart.html">
+            <i class="bi bi-cart" style="font-size: 1.5rem"></i>
+            <span
+              id="cart-count"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              style="font-size: 0.75rem">
+              0
+            </span>
+          </a>
+          <a class="btn-getstarted me-2" href="login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content - Shop Section -->
+    <main class="main mb-5">
+      <section class="shop-section">
+        <div class="container" data-aos="zoom-out">
+          <div class="section-title">
+            <h2 class="title">Our Goblin Collection</h2>
+            <p class="subtitle">Explore our unique range of Goblin-inspired products.</p>
+            <hr class="title-divider" />
+          </div>
+          <!-- Search Bar and Filter Buttons -->
+          <div class="filter-bar">
+            <input type="text" id="searchBar" class="form-control" placeholder="Search products..." />
+
+            <!-- Dropdown-style filter -->
+            <div class="dropdown filter-buttons">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="filterDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-funnel-fill"></i>
+                Filter
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                <li>
+                  <button class="dropdown-item" data-filter="*">All</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" data-filter=".business">Business</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" data-filter=".zombie">Zombie</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" data-filter=".fantasy">Fantasy</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="row g-3 isotope-grid mb-5" id="productGrid">
+            <div class="col-md-3 filter-item business">
+                <div class="card product-card">
+                  <div class="card-body">
+                      <img class="card-img-top" src="assets/img/products/zombie1.png">
+                      <h4 class="product-title text-center">Business Goblin</h4>
+                      <p class="text-center">$4.99</p>
+                      <a>Product Detail</a>
+                      <a>Add Cart</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 filter-item business">
+                <div class="card product-card">
+                  <div class="card-body">
+                      <img class="card-img-top" src="assets/img/products/zombie1.png">
+                      <h4 class="product-title text-center">Business Goblin2</h4>
+                      <p class="text-center">$4.99</p>
+                      <a>Product Detail</a>
+                      <a>Add Cart</a>
+                  </div>
+                </div>
+            </div>
+
+               <div class="col-md-3 filter-item zombie">
+                <div class="card product-card">
+                  <div class="card-body">
+                      <img class="card-img-top" src="assets/img/products/zombie1.png">
+                      <h4 class="product-title text-center">Zombie Goblin</h4>
+                      <p class="text-center">$4.99</p>
+                      <a>Product Detail</a>
+                      <a>Add Cart</a>
+                  </div>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer dark-background">
+      <div class="copyright text-center">
+        <div
+          class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+          <div class="d-flex flex-column align-items-center align-items-lg-start">
+            <div>
+              © Copyright
+              <strong><span>Goblintown</span></strong>
+              . All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      function initializeIsotope(){
+        const $grid = $('.isotope-grid').isotope({
+            itemSelector: '.filter-item',
+            layoutMode: 'fitRows',
+        });
+        $('#searchBar').on('keyup', function(){
+            const searchText = $(this).val().toLowerCase();
+            $grid.isotope({
+              filter: function(){
+                return $(this).find('.product-title').text().toLowerCase().includes(searchText);
+              }
+            })
+
+        });
+
+        $('.filter-buttons').on('click', '.dropdown-item', function(){
+            const filterValue = $(this).data('filter');
+            $grid.isotope({filter: filterValue});
+            $('.filter-buttons .btn').removeClass('active');
+            $(this).addClass('active');
+        })
+
+      }
+    </script>
+    <script>
+      initializeIsotope();
+  AOS.init();
+</script>
+  </body>
+</html>

@@ -30,11 +30,28 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Ranchers&display=swap"
       rel="stylesheet" />
     <!-- Main CSS File -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      .btn-primary {
+        background: transparent;
+        border: 2px solid black;
+        color: black;
+        border-radius: 40px;
+        padding: 10px 50px;
+        transition: 0.5s;
+      }
+      .btn-primary:hover {
+        background: black;
+        border: 2px solid black;
+        color: white;
+        border-radius: 40px;
+        padding: 10px 50px;
+      }
+      .btn-get-started:hover{
+
+        background-color: #63b75e;
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -78,10 +95,10 @@
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="carousel-bg" style="background-image: url('assets/img/hero10.png')"></div>
+              <div class="carousel-bg" style="background-image: url('assets/img/hero11.jpg')"></div>
             </div>
             <div class="carousel-item">
-              <div class="carousel-bg"  style="background-image: url('assets/img/hero11.jpg')"></div>
+              <div class="carousel-bg" style="background-image: url('assets/img/hero10.png')"></div>
             </div>
             <div class="carousel-item">
               <div class="carousel-bg" style="background-image: url('assets/img/hero12.png')"></div>
@@ -91,8 +108,14 @@
 
         <div class="hero-container text-center position-absolute top-50 start-50 translate-middle">
           <!-- <img src="assets/img/about2.png" class="hero-left-image" alt="Left Image"> -->
-          <h1>Welcome to <span>GoblinTown</span></h1>
-          <p>Get your own asset of GoblinTown characters!</p>
+          <h1 data-aos="fade-down">
+            Welcome to
+            <span>GoblinTown</span>
+          </h1>
+          <p data-aos="fade-up" data-aos-delay="500">
+            <!-- Enter if ye dare, and discover the many wonders and mischief waiting beneath the forest floor.  -->
+            Goblins, artifacts, and oddities galore!
+          </p>
           <div class="d-flex justify-content-center" data-aos="zoom-out" data-aos-delay="800">
             <a href="https://www.trutharts.com/" class="btn-get-started scrollto me-md-3">Visit Truth Arts</a>
             <a href="shop.html" class="btn-get-started scrollto ms-md-3">Visit Assets Store</a>
@@ -109,26 +132,19 @@
 
         <div class="container" data-aos="fade-up">
           <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-
             <div class="col-lg-6">
               <h3 class="pt-0 pt-lg-5">Welcome to GolbinTown Asset Store!</h3>
-              <p>In, Goblin Asset Store,In, Goblin Asset StoreIn, Goblin Asset Store
-              In, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset Store
-            In, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset Store
-          vIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset Store
-        In, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset StoreIn, Goblin Asset Store</p>
-            </div>
+              <p>
+Deep beneath the twisted roots of the ancient trees lies the Gobliton Asset Store, a bustling trove of goblin-crafted wonders, enchanted oddities, and rare treasures. This chaotic marketplace is filled with ramshackle stalls, hidden nooks, and secret passages where goblins of every shape and size barter, bicker, and proudly showcase their wares. Some say the Gobliton Asset Store has always existed, while others claim it magically drifts from forest to forest, vanishing into the mists only to reappear, stocked with fresh loot and ready for new adventurers.
 
+              </p>
+            </div>
             <div class="col-lg-6">
-                  <img class="d-block mx-auto" src="assets/img/about5.png">
+              <img src="assets/img/about5.png" class="img-fluid d-block mx-auto aboutimg" alt="" />
             </div>
-
           </div>
         </div>
-
-
       </section>
-
       <!-- Services Section -->
       <section id="services" class="services section">
         <!-- Section Title -->
@@ -142,7 +158,7 @@
             <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
               <div class="service-item">
                 <div class="img">
-                  <img class="img-fluid" src="assets/img/goblin1.png">
+                  <img src="assets/img/goblin1.png" class="img-fluid" alt="" />
                 </div>
                 <div class="details position-relative">
                   <div class="icon">
@@ -150,10 +166,9 @@
                   </div>
                   <a href="service-details.html" class="stretched-link">
                     <h3>Goblins</h3>
-                    <p>We have 500+ assets of goblin characters</p>
                   </a>
                   <p>
-
+                    Adopt your own goblin! Each goblin is unique, with a personality all its own, waiting for a new owner to take them on adventures.
                   </p>
                 </div>
               </div>
@@ -163,7 +178,7 @@
             <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
               <div class="service-item">
                 <div class="img">
-                    <img class="img-fluid" src="assets/img/goblin2.png">
+                  <img src="assets/img/goblin2.png" class="img-fluid" alt="" />
                 </div>
                 <div class="details position-relative">
                   <div class="icon">
@@ -171,9 +186,9 @@
                   </div>
                   <a href="service-details.html" class="stretched-link">
                     <h3>Accessories</h3>
-                    <p>Make your own unique accessories with the goblin images</p>
                   </a>
                   <p>
+                   From enchanted cloaks to rare trinkets, dress up your goblin in style!
                   </p>
                 </div>
               </div>
@@ -183,17 +198,17 @@
             <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
               <div class="service-item">
                 <div class="img">
-                                      <img class="img-fluid" src="assets/img/goblin3.jpg">
+                  <img src="assets/img/goblin3.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="details position-relative">
                   <div class="icon">
-                    <i class="bi bi-palette"></i>
+<i class="bi bi-palette"></i>
                   </div>
                   <a href="service-details.html" class="stretched-link">
                     <h3>Customization</h3>
                   </a>
                   <p>
-
+          Bring a piece of Goblintown to life on your favorite items! Choose from a range of designs such as t-shirts, mugs, tote bags, and more. Show off your goblin spirit wherever you go!"
                   </p>
                 </div>
               </div>
@@ -214,18 +229,23 @@
           <h2>Our Assets</h2>
           <p>Enchanted Assets, Curated by Goblins – Discover, Customize, and Collect!</p>
           <div class="text-center mt-3">
-            <a href="shop.html" class="btn btn-shop">Shop All</a>
+            <a href="shop.html" class="btn btn-primary">Shop All</a>
           </div>
         </div>
         <!-- End Section Title -->
 
         <div class="container-fluid">
           <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
+            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-sporty">Business</li>
+              <li data-filter=".filter-casual">Rock star</li>
+              <li data-filter=".filter-formal">Detective</li>
+              <li data-filter=".filter-fantasy">Zombie</li>
+            </ul>
 
             <div class="row g-0 isotope-container" data-aos="fade-up" data-aos-delay="200">
-              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item">
-                
+              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-casual">
                 <div class="portfolio-content h-100">
                   <img src="assets/img/products/p1.png" class="img-fluid" alt="" />
                   <div class="portfolio-info">
@@ -241,9 +261,79 @@
                   </div>
                 </div>
               </div>
+              <!-- End Portfolio Item -->
 
-              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item">
-                
+              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-casual">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/products/p4.png" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <a
+                      href="assets/img/products/p4.png"
+                      data-gallery="portfolio-gallery-product"
+                      class="glightbox preview-link">
+                      <i class="bi bi-zoom-in"></i>
+                    </a>
+                    <a href="product-detail.html" title="More Details" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-sporty">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/products/p6.png" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <a
+                      href="assets/img/products/p6.png"
+                      data-gallery="portfolio-gallery-branding"
+                      class="glightbox preview-link">
+                      <i class="bi bi-zoom-in"></i>
+                    </a>
+                    <a href="product-detail.html" title="More Details" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-fantasy">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/products/p2.png" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <a
+                      href="assets/img/products/p2.png"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link">
+                      <i class="bi bi-zoom-in"></i>
+                    </a>
+                    <a href="product-detail.html" title="More Details" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div class="col-xl-3 col-lg-4 col-md-6 mt-md-4 portfolio-item isotope-item filter-formal">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/products/p3.png" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <a
+                      href="assets/img/products/p3.png"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link">
+                      <i class="bi bi-zoom-in"></i>
+                    </a>
+                    <a href="product-detail.html" title="More Details" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 mt-md-4 portfolio-item isotope-item filter-formal">
                 <div class="portfolio-content h-100">
                   <img src="assets/img/products/zombie1.png" class="img-fluid" alt="" />
                   <div class="portfolio-info">
@@ -259,9 +349,7 @@
                   </div>
                 </div>
               </div>
-
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item">
-                
+                            <div class="col-xl-3 col-lg-4 col-md-6 mt-md-4 portfolio-item isotope-item filter-formal">
                 <div class="portfolio-content h-100">
                   <img src="assets/img/products/zombie2.png" class="img-fluid" alt="" />
                   <div class="portfolio-info">
@@ -277,12 +365,26 @@
                   </div>
                 </div>
               </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 mt-md-4 portfolio-item isotope-item filter-formal">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/products/zombie3.png" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <a
+                      href="assets/img/products/zombie3.png"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link">
+                      <i class="bi bi-zoom-in"></i>
+                    </a>
+                    <a href="https://goblintownassets.netlify.app/product-detail.html?productId=XeC3QWyYB8PWsLdgKlWA" title="More Details" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
               <!-- End Portfolio Item -->
-
-
             </div>
             <!-- End Portfolio Container -->
-            <a href="shop.html" class="btn btn-shop d-block mx-auto mt-md-4" style="width: 30%" data-aos="fade-up">
+            <a href="shop.html" class="btn btn-primary d-block mx-auto mt-md-4" style="width: 30%" data-aos="fade-up">
               Let's shop for fancy assets!
             </a>
           </div>
